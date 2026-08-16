@@ -1,0 +1,199 @@
+.verticals-section {
+  padding: 6rem 2rem;
+  position: relative;
+  background: var(--color-bg-dark);
+}
+
+.verticals-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.verticals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.vertical-card {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--radius-xl);
+  background: rgba(18, 12, 18, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-medium);
+}
+
+.vertical-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-primary-red), transparent);
+  opacity: 0.3;
+  transition: opacity var(--transition-fast);
+}
+
+.vertical-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-primary-red);
+  box-shadow: 0 10px 40px rgba(255, 30, 56, 0.25), inset 0 0 20px rgba(255, 30, 56, 0.05);
+}
+
+.vertical-card:hover::before {
+  opacity: 1;
+}
+
+.vertical-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.vertical-badge {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--color-primary-red);
+  background: rgba(255, 30, 56, 0.12);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 30, 56, 0.3);
+}
+
+.vertical-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 30, 56, 0.1);
+  border: 1px solid rgba(255, 30, 56, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255, 30, 56, 0.2);
+  transition: transform var(--transition-fast);
+}
+
+.vertical-card:hover .vertical-icon-box {
+  transform: scale(1.1) rotate(3deg);
+  background: var(--color-primary-red);
+  box-shadow: 0 0 30px rgba(255, 30, 56, 0.8);
+}
+
+.vertical-card:hover .vertical-main-icon {
+  color: #ffffff !important;
+}
+
+.vertical-card-body {
+  flex: 1;
+}
+
+.vertical-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+}
+
+.vertical-tagline {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.vertical-desc {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.vertical-highlights {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+}
+
+.highlights-heading {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--color-text-primary);
+}
+
+.vertical-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 2rem;
+}
+
+.v-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.v-stat-val {
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.v-stat-lbl {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+.vertical-card-footer {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 960px) {
+  .verticals-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .vertical-card {
+    padding: 1.75rem;
+  }
+  
+  .vertical-stats-bar {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}

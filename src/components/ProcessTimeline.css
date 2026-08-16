@@ -1,0 +1,213 @@
+.process-timeline-wrapper {
+  position: relative;
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+
+.circuit-track-line {
+  position: absolute;
+  top: 130px;
+  left: 5%;
+  right: 5%;
+  height: 4px;
+  background: rgba(255, 30, 56, 0.2);
+  border-radius: 2px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.circuit-pulse-glow {
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--color-primary-red), #ffffff, var(--color-primary-red), transparent);
+  box-shadow: 0 0 20px var(--color-primary-red);
+  animation: circuitScan 4s linear infinite;
+}
+
+@keyframes circuitScan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(600%);
+  }
+}
+
+.timeline-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-step-node {
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius-xl);
+  background: rgba(18, 12, 18, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-medium);
+}
+
+.timeline-step-node:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-primary-red);
+  box-shadow: 0 12px 40px rgba(255, 30, 56, 0.3);
+}
+
+.step-node-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.step-number-badge {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 0 0 15px rgba(255, 30, 56, 0.6);
+}
+
+.step-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 30, 56, 0.1);
+  border: 1px solid rgba(255, 30, 56, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.timeline-step-node:hover .step-icon-box {
+  transform: scale(1.1);
+  background: var(--color-primary-red);
+  box-shadow: 0 0 25px rgba(255, 30, 56, 0.8);
+}
+
+.timeline-step-node:hover .step-main-icon {
+  color: #ffffff !important;
+}
+
+/* Glowing Connector Circuit Dot */
+.circuit-node-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-bg-dark);
+  border: 2px solid var(--color-primary-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 0 15px rgba(255, 30, 56, 0.6);
+  position: relative;
+}
+
+.inner-glow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary-red);
+  box-shadow: 0 0 10px #ffffff;
+  animation: pulseDot 2s infinite ease-in-out alternate;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.8); opacity: 0.7; }
+  100% { transform: scale(1.3); opacity: 1; }
+}
+
+.step-node-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.step-phase {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.3rem;
+}
+
+.step-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.step-subtitle {
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.85rem;
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.step-deliverables-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem;
+  margin-top: auto;
+}
+
+.deliv-heading {
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.deliv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.deliv-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--color-text-primary);
+  line-height: 1.35;
+}
+
+.deliv-icon {
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+  .timeline-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .circuit-track-line {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .timeline-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}

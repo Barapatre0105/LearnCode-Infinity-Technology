@@ -1,0 +1,259 @@
+.about-cta-section {
+  position: relative;
+  background: var(--color-bg-dark);
+  overflow: hidden;
+}
+
+/* About Teaser Styles */
+.about-teaser-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.about-teaser-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.about-pill {
+  margin-bottom: 1.25rem;
+  width: fit-content;
+}
+
+.about-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.about-description {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.value-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.value-icon {
+  margin-bottom: 0.75rem;
+}
+
+.value-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+}
+
+.value-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Info Box */
+.about-info-box {
+  padding: 2.5rem;
+  border-radius: var(--radius-xl);
+  background: rgba(18, 12, 18, 0.8);
+  border: 1px solid rgba(255, 30, 56, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-box-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.info-box-heading {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.info-stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.stat-label {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+}
+
+.stat-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.info-box-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-text-muted);
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 2. Cyber Skyline Glow CTA Banner */
+.cta-banner-container {
+  max-width: 1400px;
+  margin: 2rem auto 6rem;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.skyline-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 30, 56, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 30, 56, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 90%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 90%);
+  pointer-events: none;
+  border-radius: var(--radius-xl);
+}
+
+.skyline-glow-orb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 30, 56, 0.3) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.cta-banner-card {
+  position: relative;
+  padding: 4.5rem 3rem;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, rgba(24, 15, 24, 0.9) 0%, rgba(10, 6, 10, 0.95) 100%);
+  border: 1px solid rgba(255, 30, 56, 0.4);
+  box-shadow: 0 0 50px rgba(255, 30, 56, 0.25), inset 0 0 30px rgba(255, 30, 56, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(16px);
+}
+
+.cta-subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+}
+
+.cta-main-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0.75rem 0 1rem;
+  line-height: 1.1;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.cta-subheading {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  max-width: 650px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.cta-button-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.cta-banner-footer-specs {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  justify-content: center;
+}
+
+.spec-dot {
+  color: var(--color-primary-red);
+}
+
+@media (max-width: 960px) {
+  .about-teaser-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .cta-banner-card {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner-footer-specs {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  
+  .spec-dot {
+    display: none;
+  }
+}

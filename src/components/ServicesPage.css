@@ -1,0 +1,167 @@
+.services-page-wrapper {
+  min-height: 100vh;
+  padding-top: 7.5rem;
+  background: var(--color-bg-dark);
+}
+
+.services-hero {
+  position: relative;
+  padding: 4rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.services-hero-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 30, 56, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 30, 56, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+  pointer-events: none;
+}
+
+.services-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.services-main-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 1rem 0;
+  line-height: 1.1;
+}
+
+.services-hero-sub {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.65;
+}
+
+.services-cta-bar {
+  display: flex;
+  justify-content: center;
+}
+
+/* Offerings Section */
+.services-offerings-section {
+  padding: 5rem 0;
+}
+
+.services-offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-offer-card {
+  padding: 2.5rem;
+  border-radius: var(--radius-xl);
+  background: rgba(18, 12, 18, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all var(--transition-medium);
+}
+
+.service-offer-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary-red);
+  box-shadow: 0 10px 40px rgba(255, 30, 56, 0.25);
+}
+
+.srv-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.srv-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 30, 56, 0.1);
+  border: 1px solid rgba(255, 30, 56, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(255, 30, 56, 0.2);
+}
+
+.srv-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.srv-tagline {
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.25rem;
+}
+
+.srv-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.srv-features-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.srv-feat-heading {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.85rem;
+  display: block;
+}
+
+.srv-feat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.srv-feat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--color-text-primary);
+}
+
+.srv-feat-icon {
+  flex-shrink: 0;
+}
+
+/* Timeline Section */
+.services-timeline-section {
+  padding: 5rem 0 7rem;
+  background: rgba(12, 8, 12, 0.5);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+@media (max-width: 960px) {
+  .services-offerings-grid {
+    grid-template-columns: 1fr;
+  }
+}
