@@ -22,7 +22,6 @@ const HomeAboutSection = ({ onOpenContact, onNavigate }) => {
         
         {/* Section Header */}
         <SectionTitle 
-          badge="WHO WE ARE"
           title="BRIDGING PRACTICAL LEARNING WITH REAL-WORLD INNOVATION"
           subtitle="LearnCode Infinity Technologies is an AI and technology-focused company dedicated to building practical technology solutions and creating industry-ready learning opportunities."
           center
@@ -76,7 +75,6 @@ const HomeAboutSection = ({ onOpenContact, onNavigate }) => {
         {/* "Our Two Worlds" Interactive Architecture Diagram */}
         <div className="home-two-worlds-wrapper glass-card">
           <div className="two-worlds-header text-center">
-            <span className="text-mono text-red text-xs">OUR TWO WORLDS</span>
             <h3 className="two-worlds-title">From Learning to Real-World Innovation</h3>
             <p className="two-worlds-desc">
               We believe technology becomes more valuable when knowledge is transformed into real-world solutions. Our Learning division develops technology talent, while our Corporate Solutions division applies that expertise to solve real business problems.

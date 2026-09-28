@@ -121,7 +121,6 @@ const AboutPage = ({ onOpenContact }) => {
         {/* 2. Section 1: Who We Are & Dual Division Overview */}
         <section className="about-block who-we-are-block">
           <SectionTitle 
-            badge="01. WHO WE ARE"
             title="A DUAL-PILLAR TECHNOLOGY ECOSYSTEM"
             subtitle="Creating a bridge between learning technology and applying technology in the real world."
             center
@@ -171,7 +170,6 @@ const AboutPage = ({ onOpenContact }) => {
         {/* 3. Section 9: "Our Two Worlds" Diagram Architecture */}
         <section className="about-block two-worlds-block">
           <SectionTitle 
-            badge="02. OUR TWO WORLDS"
             title="FROM LEARNING TO REAL-WORLD INNOVATION"
             subtitle="Creating a complete ecosystem where technical knowledge transforms directly into enterprise solutions."
             center

@@ -1,45 +1,9 @@
 import React from 'react';
-import { Cpu, Cog, BarChart3, ShieldCheck } from 'lucide-react';
-import IconFeatureCard from './IconFeatureCard';
+import { ArrowRight, Play } from 'lucide-react';
 import GlowingBrainCanvas from './GlowingBrainCanvas';
 import './HeroSection.css';
 
 const HeroSection = ({ onSelectFeature, onOpenContact, onOpenDemo }) => {
-
-  const featureCards = [
-    {
-      id: 'strategy',
-      icon: Cpu,
-      title: 'AI STRATEGY & CONSULTING',
-      subtitle: 'NEURAL ROADMAP & ARCHITECTURE',
-      description: 'Strategic AI positioning, enterprise roadmap planning, and bespoke neural network architecture implementation.',
-      badge: '01 MODULE'
-    },
-    {
-      id: 'automation',
-      icon: Cog,
-      title: 'INTELLIGENT AUTOMATION',
-      subtitle: 'AUTONOMOUS WORKFLOWS',
-      description: 'Self-correcting process automation, intelligent agent orchestration, and automated decision-making engines.',
-      badge: '02 MODULE'
-    },
-    {
-      id: 'insights',
-      icon: BarChart3,
-      title: 'DATA-DRIVEN INSIGHTS',
-      subtitle: 'PREDICTIVE ANALYTICS',
-      description: 'High-density multi-category data modeling, real-time analytics, and predictive market forecasting systems.',
-      badge: '03 MODULE'
-    },
-    {
-      id: 'security',
-      icon: ShieldCheck,
-      title: 'SECURE & SCALABLE SOLUTIONS',
-      subtitle: 'ZERO-TRUST AI FRAMEWORK',
-      description: 'Enterprise-grade encryption, SOC2 compliant neural models, and scalable cloud-native AI infrastructures.',
-      badge: '04 MODULE'
-    }
-  ];
 
   return (
     <section className="hero-section">
@@ -71,6 +35,29 @@ const HeroSection = ({ onSelectFeature, onOpenContact, onOpenDemo }) => {
               We build intelligent AI solutions that drive innovation, automate complexity, and deliver measurable results for your business.
             </p>
 
+            {/* Action Buttons matching User Screenshot */}
+            <div className="hero-action-row">
+              <button 
+                className="btn-gradient-pill" 
+                onClick={onOpenContact}
+              >
+                <span>Send Me a Proposal</span>
+                <span className="pill-arrow-circle">
+                  <ArrowRight size={18} />
+                </span>
+              </button>
+
+              <button 
+                className="btn-discovery-call" 
+                onClick={onOpenDemo || onOpenContact}
+              >
+                <span className="discovery-play-icon">
+                  <Play size={14} fill="currentColor" style={{ marginLeft: '2px' }} />
+                </span>
+                <span>Book a Discovery Call</span>
+              </button>
+            </div>
+
           </div>
 
           {/* Right Column: 3D Holographic Interactive Glowing AI Brain */}
@@ -78,31 +65,6 @@ const HeroSection = ({ onSelectFeature, onOpenContact, onOpenDemo }) => {
             <GlowingBrainCanvas />
           </div>
 
-        </div>
-
-        {/* Bottom Feature Cards Grid (4 Cards from Poster) */}
-        <div id="solutions" className="hero-features-wrapper">
-          <div className="features-header-row">
-            <div className="features-title-group">
-              <span className="text-mono text-red">— CORE CAPABILITIES</span>
-              <h2 className="features-subheading">Enterprise AI Solutions Matrix</h2>
-            </div>
-            <p className="features-hint text-mono">CLICK ANY MODULE TO VIEW SYSTEM SPECIFICATIONS →</p>
-          </div>
-
-          <div className="feature-cards-grid">
-            {featureCards.map((card) => (
-              <IconFeatureCard
-                key={card.id}
-                icon={card.icon}
-                title={card.title}
-                subtitle={card.subtitle}
-                description={card.description}
-                badge={card.badge}
-                onClick={() => onSelectFeature(card)}
-              />
-            ))}
-          </div>
         </div>
 
       </div>

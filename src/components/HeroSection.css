@@ -121,8 +121,99 @@
   color: var(--color-text-secondary);
   line-height: 1.65;
   max-width: 620px;
-  margin: 0 auto 2.25rem auto;
+  margin: 0 auto 1.75rem auto;
   text-align: center;
+}
+
+/* Hero Action Buttons from Poster / Screenshot */
+.hero-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-gradient-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 0.75rem 0.7rem 1.75rem;
+  background: linear-gradient(100deg, #3b82f6 0%, #8b5cf6 30%, #d946ef 65%, #ff1e38 100%);
+  border-radius: 9999px;
+  border: none;
+  color: #ffffff;
+  font-family: var(--font-heading, sans-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 30, 56, 0.35), 0 4px 15px rgba(139, 92, 246, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-gradient-pill:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(255, 30, 56, 0.6), 0 0 25px rgba(255, 30, 56, 0.4);
+}
+
+.pill-arrow-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.btn-gradient-pill:hover .pill-arrow-circle {
+  transform: translateX(3px);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.btn-discovery-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: var(--font-heading, sans-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.7rem 1.25rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+.btn-discovery-call:hover {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+.discovery-play-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn-discovery-call:hover .discovery-play-icon {
+  transform: scale(1.1);
+  background: rgba(255, 30, 56, 0.25);
+  border-color: rgba(255, 30, 56, 0.6);
+  color: #ff1e38;
 }
 
 .hero-cta-group {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
+import ProjectConfiguratorSection from './components/ProjectConfiguratorSection';
 import TechMarqueeSection from './components/TechMarqueeSection';
 import HomeAboutSection from './components/HomeAboutSection';
 import VerticalsSection from './components/VerticalsSection';
@@ -53,51 +54,13 @@ function App() {
       {/* Dynamic View Routing */}
       <main>
         {activePage === 'home' && (
-          <>
-            {/* Step 2 & 3: Hero Section featuring Glowing Brain Canvas & 4-Icon Feature Strip */}
-            <div className="reveal-slide-up">
-              <HeroSection
-                onSelectFeature={(feature) => setSelectedFeature(feature)}
-                onOpenContact={() => setIsContactOpen(true)}
-                onOpenDemo={handleOpenDemo}
-              />
-            </div>
-
-            {/* Step 4.9: Technologies Strip (Continuous Logo Marquee) */}
-            <div className="reveal-slide-up delay-1">
-              <TechMarqueeSection />
-            </div>
-
-            {/* Who We Are & Our Two Worlds Overview */}
-            <div className="reveal-slide-up delay-1">
-              <HomeAboutSection 
-                onNavigate={(page) => setActivePage(page)}
-                onOpenContact={() => setIsContactOpen(true)}
-              />
-            </div>
-
-            {/* Step 4.8: "Our Two Verticals" Cards (Learning & Corporate) */}
-            <div className="reveal-slide-up delay-2">
-              <VerticalsSection 
-                onOpenContact={() => setIsContactOpen(true)}
-              />
-            </div>
-
-            {/* Step 4.10: Featured Projects & Case Study Cards */}
-            <div className="reveal-slide-up delay-2">
-              <FeaturedProjectsSection 
-                onOpenContact={() => setIsContactOpen(true)}
-              />
-            </div>
-
-            {/* Step 4.11: About Teaser + Cyber Skyline Glow CTA Banner */}
-            <div className="reveal-slide-up delay-2">
-              <AboutCtaBannerSection 
-                onOpenContact={() => setIsContactOpen(true)}
-                onOpenDemo={handleOpenDemo}
-              />
-            </div>
-          </>
+          <div className="reveal-slide-up">
+            <HeroSection
+              onSelectFeature={(feature) => setSelectedFeature(feature)}
+              onOpenContact={() => setIsContactOpen(true)}
+              onOpenDemo={handleOpenDemo}
+            />
+          </div>
         )}
 
         {/* About Us Page */}
